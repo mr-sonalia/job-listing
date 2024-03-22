@@ -1,6 +1,7 @@
+import { JobType } from "@/utils/types";
 import mongoose from "mongoose";
 
-const JobSchema = new mongoose.Schema({
+const JobSchema = new mongoose.Schema<JobType>({
 	title: {
 		type: String,
 	},
@@ -26,6 +27,6 @@ const JobSchema = new mongoose.Schema({
 	},
 });
 
-const JobModel = new mongoose.Model("Job", JobSchema);
+const JobModel = mongoose.model<JobType>("Job", JobSchema);
 
 export { JobModel };

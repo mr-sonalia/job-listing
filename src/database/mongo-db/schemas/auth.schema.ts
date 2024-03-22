@@ -14,6 +14,7 @@ const AuthSchema = new mongoose.Schema({
 	profile: { type: mongoose.Schema.Types.ObjectId, ref: "Profile" },
 });
 
-const AuthModel = new mongoose.Model("Auth", AuthSchema);
+const AuthModel = mongoose.model("Auth", AuthSchema);
 
 export { AuthModel };
+
