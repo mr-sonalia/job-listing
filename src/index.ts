@@ -2,7 +2,7 @@ require("dotenv").config({ path: ".env" });
 
 import express from "express";
 import { initializeDB } from "./database";
-import { profileRouter } from "./routes";
+import { jobRouter, profileRouter } from "./routes";
 
 const app = express();
 const PORT = process.env.SERVER_PORT || 3000;
@@ -24,6 +24,7 @@ app.get("/ping", (req, res) => {
 });
 
 app.use("/profiles", profileRouter);
+app.use("/jobs", jobRouter);
 
 const server = app.listen(PORT, () => {
 	console.log(`Server is running on port ${PORT}`);

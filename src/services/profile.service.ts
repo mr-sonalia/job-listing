@@ -22,6 +22,15 @@ export async function getAllProfiles(where: FilterQuery<ProfileItemType>) {
 		throw error;
 	}
 }
+export async function getProfileByID(id: string) {
+	try {
+		const profile = await ProfileModel.findById(id);
+
+		return profile;
+	} catch (error) {
+		throw error;
+	}
+}
 export async function updateAllProfiles(
 	data: Partial<ProfileItemType>,
 	where: FilterQuery<ProfileItemType>,

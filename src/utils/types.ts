@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+import { ObjectId } from "mongoose";
 
 export type ValidRoleTypes = "TERRAFORMERS" | "APPLICANTS";
 
@@ -27,27 +27,12 @@ export type ProfileItemType = {
 };
 
 export type JobType = {
-	title: {
-		type: string;
-	};
-	description: {
-		type: string;
-	};
-	location: {
-		type: string;
-	};
-	deadline: {
-		type: Date;
-	};
-	contactPhoneNumber: {
-		type: string;
-	};
-	contactEmail: {
-		type: string;
-	};
-
-	postedBy: { type: mongoose.Schema.Types.ObjectId; ref: "Profile" };
-	archived: {
-		type: boolean;
-	};
+	title: string;
+	description: string;
+	location: string;
+	deadline: Date;
+	contactPhoneNumber: string;
+	contactEmail: string;
+	postedBy: ObjectId;
+	archived: boolean;
 };

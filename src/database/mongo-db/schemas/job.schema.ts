@@ -30,3 +30,4 @@ const JobSchema = new mongoose.Schema<JobType>({
 const JobModel = mongoose.model<JobType>("Job", JobSchema);
 
 export { JobModel };
+
