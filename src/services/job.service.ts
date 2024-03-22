@@ -22,6 +22,17 @@ export async function getAllJobs(where: FilterQuery<JobType>) {
 		throw error;
 	}
 }
+
+export async function getjobByID(id: string) {
+	try {
+		const job = await JobModel.findById(id);
+
+		return job;
+	} catch (error) {
+		throw error;
+	}
+}
+
 export async function updateAllJobs(data: Partial<JobType>, where: FilterQuery<JobType>) {
 	try {
 		const updatedJobs = await JobModel.updateMany(where, data);

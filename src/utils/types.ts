@@ -35,4 +35,5 @@ export type JobType = {
 	contactEmail: string;
 	postedBy: ObjectId;
 	archived: boolean;
+	applicants: ObjectId[];
 };

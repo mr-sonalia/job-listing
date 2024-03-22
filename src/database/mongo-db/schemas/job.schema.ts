@@ -25,6 +25,8 @@ const JobSchema = new mongoose.Schema<JobType>({
 	archived: {
 		type: Boolean,
 	},
+
+	applicants: [{ type: mongoose.Schema.Types.ObjectId, ref: "Profile" }],
 });
 
 const JobModel = mongoose.model<JobType>("Job", JobSchema);
