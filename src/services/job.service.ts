@@ -33,11 +33,11 @@ export async function getjobByID(id: string) {
 	}
 }
 
-export async function updateAllJobs(data: Partial<JobType>, where: FilterQuery<JobType>) {
+export async function updateJobByID(data: Partial<JobType>, id: string) {
 	try {
-		const updatedJobs = await JobModel.updateMany(where, data);
+		const updatedJob = await JobModel.findByIdAndUpdate(id, data);
 
-		return updatedJobs;
+		return updatedJob;
 	} catch (error) {
 		throw error;
 	}

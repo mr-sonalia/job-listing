@@ -1,10 +1,17 @@
 import { Router } from "express";
-import { handleJobCreation, handleJobListingSearch } from "../controllers";
+import {
+	handleApplicantInterest,
+	handleJobCreation,
+	handleJobListingSearch,
+	handleJobUpdate,
+} from "../controllers";
 
 const jobRouter = Router();
 
-jobRouter.post("/", handleJobCreation);
 jobRouter.get("/listings", handleJobListingSearch);
+jobRouter.post("/", handleJobCreation);
+jobRouter.put("/archive", handleJobUpdate);
+jobRouter.post("/apply", handleApplicantInterest);
 
 export { jobRouter };
 
