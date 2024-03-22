@@ -1,0 +1,23 @@
+Alone we can do so little; together we can do so much. With Nbyula growing exponentially, terraformers are looking forward to expanding their team. Could you help them build a customizable job board?
+
+Objectives
+$ Terraformers and applicants should be able to sign up and login to 
+  the app
+$ Terraformers should be able to post a job listing on a common job 
+  board shared between other terraformers
+	$ The listing should contain: title, description, location, deadline, contact phone 
+  number and contact email
+$ Terraformers should be able to archive a job listing
+$ Applicants should be able to mark their interest on any available 
+  and active job listing
+$ Terraformers should be able to see interested applicants
+
+Expectations
+$ Focus on making the application completely functional, edge cases 
+  are important
+$ Git history is paramount to us. The assignment should be available
+  on GitHub (or any other Git hosting solution) for us to review. Make
+  sure you follow all the best practices while using Git as you would  
+  do on any production application
+
+
