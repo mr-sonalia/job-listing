@@ -1,4 +1,4 @@
-# Job Board Appplication Backend using DI Design pattern
+# Job Board Application Backend using DI Design pattern
 
 ### Project features: 
 - Job Listings: Employers can post detailed job listings, including essential information such as job title, description, location, application deadline, and contact details.
